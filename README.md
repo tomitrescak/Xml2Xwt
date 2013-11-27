@@ -5,6 +5,7 @@
 
 ## Installation 
 
+1. Enable Xamarin Studio Addin called "Addin Maker" under "Addin Development"
 1. Download and compile the project in Xamarin Studio
 1. Copy the output to the new directory in:
 	* **Mac:**	~/Library/Application Support/XamarinStudio-4.0/LocalInstall/Addins
