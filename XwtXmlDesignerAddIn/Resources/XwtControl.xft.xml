@@ -11,8 +11,8 @@
 	
 	<TemplateFiles>
 		<XwtMainControlClass DefaultExtension=".cs" DefaultName="XwtControl" BuildAction="Compile" />
-		<XwtCsControlDesigner DefaultExtension=".cs" DefaultName="XwtControl.designer" BuildAction="Compile"/>
-		<XwtXmlControlDesigner DefaultExtension=".xml" DefaultName="XwtControl.designer" BuildAction="None"/>
+		<XwtCsControlDesigner DefaultExtension=".cs" DefaultName="XwtControl.designer" BuildAction="Compile" DependsOn="${name}.cs"/>
+		<XwtXmlControlDesigner DefaultExtension=".xml" DefaultName="XwtControl.designer" BuildAction="None" DependsOn="${name}.cs"/>
 	</TemplateFiles>
 	
 	<FileOptions/>

@@ -11,8 +11,8 @@
 	
 	<TemplateFiles>
 		<XwtMainWindowClass DefaultExtension=".cs" DefaultName="XwtWindow" BuildAction="Compile"/>
-		<XwtCsWindowDesigner DefaultExtension=".cs" DefaultName="XwtWindow.designer" BuildAction="Compile"/>
-		<XwtXmlWindowDesigner DefaultExtension=".xml" DefaultName="XwtWindow.designer" BuildAction="None"/>
+		<XwtCsWindowDesigner DefaultExtension=".cs" DefaultName="XwtWindow.designer" BuildAction="Compile" DependsOn="${name}.cs"/>
+		<XwtXmlWindowDesigner DefaultExtension=".xml" DefaultName="XwtWindow.designer" BuildAction="None" DependsOn="${name}.cs"/>
 	</TemplateFiles>
 	
 	<FileOptions/>
