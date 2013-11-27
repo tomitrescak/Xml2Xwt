@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Template Originator="Tomas Trescak" Created="22/09/2012" LastModified="22/09/2012">
+	
+	<TemplateConfiguration>
+		<_Name>XWT Window</_Name>
+		<Icon>md-entityset-file-icon</Icon>
+		<_Category>XWT</_Category>
+		<LanguageName>C#</LanguageName>
+		<_Description>Creates an empty XWT window with XML designer.</_Description>
+	</TemplateConfiguration>
+	
+	<TemplateFiles>
+		<XwtMainWindowClass DefaultExtension=".cs" DefaultName="XwtWindow" BuildAction="Compile"/>
+		<XwtCsWindowDesigner DefaultExtension=".cs" DefaultName="XwtWindow.designer" BuildAction="Compile"/>
+		<XwtXmlWindowDesigner DefaultExtension=".xml" DefaultName="XwtWindow.designer" BuildAction="None"/>
+	</TemplateFiles>
+	
+	<FileOptions/>
+	
+</Template>

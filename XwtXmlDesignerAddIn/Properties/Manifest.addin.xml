@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Addin 
+	namespace="XwtXmlDesignerAddIn" 
+	id="XwtXmlDesignerAddIn" 
+	name="Xwt GUI Xml Designer" 
+	author="Tomas Trescak" 
+	copyright="(C) 2013 Tomas Trescak" 
+	description="This add-in provides possibility to define XWT interfaces using XML and generating the XWT code." 
+	category="IDE extensions" 
+	version="0.1">
+	<Dependencies>
+		<Addin id="::MonoDevelop.Core" version="4.0" />
+		<Addin id="::MonoDevelop.Ide" version="4.0" />
+	</Dependencies>
+	
+	<!-- Add new icons for entify -->
+    <Extension path="/MonoDevelop/Core/StockIcons" >
+    		<StockIcon stockid="md-entityset-file-icon" resource="XwtXmlDesignerAddIn.Resources.entify32.png" />
+    		<StockIcon stockid="md-entityset-file-icon-small" resource="XwtXmlDesignerAddIn.Resources.entify16.png" />
+    </Extension>
+
+
+	<!-- Define new file template for XWT window -->
+	<Extension path="/MonoDevelop/Ide/FileTemplates">
+		<FileTemplate resource="XwtXmlDesignerAddIn.Resources.XwtWindow.xft.xml" /> 
+	</Extension>
+
+	<!-- Define default file template for XWT window -->
+	<Extension path="/MonoDevelop/Ide/FileTemplateTypes">
+		<FileTemplateType name="XwtMainWindowClass" type="XwtXmlDesignerAddIn.XwtMainWindowClass" />
+	</Extension>
+	
+	<Extension path="/MonoDevelop/Ide/FileTemplateTypes">
+		<FileTemplateType name="XwtCsWindowDesigner" type="XwtXmlDesignerAddIn.XwtCsWindowDesigner" />
+	</Extension>
+	
+	<Extension path="/MonoDevelop/Ide/FileTemplateTypes">
+		<FileTemplateType name="XwtXmlWindowDesigner" type="XwtXmlDesignerAddIn.XwtXmlWindowDesigner" />
+	</Extension>
+	
+	
+	
+	
+	<!-- Define new file template for vixee sets -->
+	<Extension path="/MonoDevelop/Ide/FileTemplates">
+		<FileTemplate resource="XwtXmlDesignerAddIn.Resources.XwtControl.xft.xml" /> 
+	</Extension>
+	
+	<Extension path="/MonoDevelop/Ide/FileTemplateTypes">
+		<FileTemplateType name="XwtMainControlClass" type="XwtXmlDesignerAddIn.XwtMainControlClass" />
+	</Extension>
+	
+	<Extension path="/MonoDevelop/Ide/FileTemplateTypes">
+		<FileTemplateType name="XwtCsControlDesigner" type="XwtXmlDesignerAddIn.XwtCsControlDesigner" />
+	</Extension>
+	
+	<Extension path="/MonoDevelop/Ide/FileTemplateTypes">
+		<FileTemplateType name="XwtXmlControlDesigner" type="XwtXmlDesignerAddIn.XwtXmlControlDesigner" />
+	</Extension>
+	
+	
+	<Extension path = "/MonoDevelop/Ide/Commands/Edit">  
+        <Command id = "XwtXmlDesignerAddIn.BuildGUI"  
+                 _label = "Build XWT GUI"  
+                 _description = "Builds XWT gui from XML definition"
+                 defaultHandler = "XwtXmlDesignerAddIn.BuildGUI" />  
+    </Extension>
+	
+	<Extension path = "/MonoDevelop/Ide/MainMenu/Build">
+    	<CommandItem id = "XwtXmlDesignerAddIn.BuildGUI" />
+	</Extension>
+	
+	<Runtime>
+	</Runtime>
+</Addin>
